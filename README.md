@@ -1,3 +1,0 @@
-# dusty
--------
-social network BEST!!!

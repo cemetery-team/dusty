@@ -1,14 +1,13 @@
 package com.company;
 
-import static org.junit.Assert.*;
+import org.junit.Assert;
 
 public class PersonTest {
 
     @org.junit.Test
     public void getName() {
-        Person person = new Person();
+        Person person = new Person("john");
         String per = person.getName();
-        assertEquals("john", per);
-
+        Assert.assertEquals("john", per);
     }
 }

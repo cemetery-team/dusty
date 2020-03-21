@@ -1,15 +1,15 @@
-package com.company;
+package main.java.com.network;
 
 public class Person {
     String name = "undefined";
 
     Person(){}
 
-    Person(String name){
+    public Person(String name){
         this.name=name;
     }
 
-    String getName(){
+    public String getName(){
         return name;
     }
 

@@ -1,10 +1,11 @@
-package com.company;
-import com.company.Person;
+package main.java.com.network;
+
+
 
 public class Main {
 
     public static void main(String[] args) {
-        Person person = new Person();
+        Person person = new Person("Charles");
         System.out.println(person.getName());
     }
 }

@@ -20,8 +20,5 @@ public class Person {
         return name;
     }
 
-    public int getColor(){ return page.color }
-
-
-
+    public int getColor(){ return page.color; }
 }

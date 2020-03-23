@@ -9,6 +9,6 @@ public class PersonTest {
     public void getName() {
         Person person = new Person("john");
         String per = person.getName();
-        Assert.assertEquals("john", per);
+        Assert.assertEquals("11john", per);
     }
 }

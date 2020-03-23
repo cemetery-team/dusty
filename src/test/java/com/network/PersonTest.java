@@ -1,5 +1,6 @@
-package com.company;
+package test.java.com.network;
 
+import main.java.com.network.Person;
 import org.junit.Assert;
 
 public class PersonTest {

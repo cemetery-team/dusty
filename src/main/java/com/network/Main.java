@@ -1,17 +1,26 @@
 package com.network;
 
+/*
 import com.mongodb.Block;
-import com.mongodb.client.*;
-import main.java.com.network.Person;
-
-import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import main.java.com.network.Person;
 import org.bson.Document;
+*/
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringApplication;
 
 
+@SpringBootApplication
 public class Main {
 
     public static void main(String[] args) {
+
+        SpringApplication.run(Main.class, args);
+
+        /*
         String server = "3.8.161.24";
 
         Person person = new Person("Charles", 2);
@@ -30,5 +39,8 @@ public class Main {
         };
 
         collection.find().forEach(printBlock);
+        */
     }
+
+
 }

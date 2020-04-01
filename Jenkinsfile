@@ -4,7 +4,7 @@ node {
         }
         stage('gradle tests') {
             withGradle {
-                sh '/opt/gradle/gradle-6.1.1/bin/gradle test --stacktrace'
+                sh '/opt/gradle/gradle-6.1.1/bin/gradle test --debug'
             }
         }
         stage('gradle build') {

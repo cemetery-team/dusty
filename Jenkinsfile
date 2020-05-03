@@ -13,6 +13,6 @@ node {
             }
         }
         stage('deploy') {
-                sh 'docker build .'
+                sh 'systemctl start dusty'
         }
 }

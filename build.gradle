@@ -35,10 +35,6 @@ dependencies {
     testRuntime 'junit:junit:4.12'
 
 
-
-    // Mongodb driver
-//    compile 'org.mongodb:mongodb-driver:3.12.2'
-
     // Spring
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'

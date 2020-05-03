@@ -42,7 +42,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'main.java.com.network.Main'
+    mainClassName = 'com.network.Main'
 }
 
 test {

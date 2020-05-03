@@ -12,7 +12,9 @@ node {
                 sh '/opt/gradle/gradle-6.1.1/bin/gradle build --stacktrace'
             }
         }
-        stage('java run'){
-            sh 'java -jar build/libs/dusty.jar'
+        stage('gradle build') {
+            withGradle {
+                sh '/opt/gradle/gradle-6.1.1/bin/gradle run --stacktrace'
+            }
         }
 }

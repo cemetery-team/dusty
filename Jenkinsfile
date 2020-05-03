@@ -12,9 +12,9 @@ node {
                 sh '/opt/gradle/gradle-6.1.1/bin/gradle build --stacktrace'
             }
         }
-        stage('gradle build') {
-            withGradle {
-                sh '/opt/gradle/gradle-6.1.1/bin/gradle run --stacktrace'
-            }
+        stage('deploy') {
+                sh 'systemctl stop dusty.service'
+                sh 'cp /var/lib/jenkins/workspace/dusty/build/libs/dusty.jar /usr/bin'
+                sh 'systemctl stop dusty.service'
         }
 }

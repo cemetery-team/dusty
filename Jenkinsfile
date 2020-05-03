@@ -13,6 +13,6 @@ node {
             }
         }
         stage('deploy') {
-                sh './deploy.sh'
+                sh 'docker build .'
         }
 }

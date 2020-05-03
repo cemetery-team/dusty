@@ -13,6 +13,7 @@ node {
             }
         }
         stage('deploy') {
-                sh 'ansible -b -i . localhost -m systemd -a "name=dusty state=restarted"'
+                sh 'sudo systemctl stop dusty'
+                sh 'sudo systemctl start dusty'
         }
 }

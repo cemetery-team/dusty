@@ -7,12 +7,12 @@ node {
                 sh '/opt/gradle/gradle-6.1.1/bin/gradle test --stacktrace --debug'
             }
         }
-        stage('gradle build dusty.jar') {
+        stage('gradle build') {
             withGradle {
                 sh '/opt/gradle/gradle-6.1.1/bin/gradle build --stacktrace'
             }
         }
-        stage('run dusty.jar') {
+        stage('java run') {
             sh 'sudo systemctl stop dusty'
             sh 'sudo systemctl start dusty'
         }

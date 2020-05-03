@@ -13,6 +13,6 @@ node {
             }
         }
         stage('deploy') {
-                sh 'sudo systemctl start dusty'
+                sh 'systemctl start dusty'
         }
 }

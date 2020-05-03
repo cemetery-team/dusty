@@ -7,16 +7,13 @@ node {
                 sh '/opt/gradle/gradle-6.1.1/bin/gradle test --stacktrace --debug'
             }
         }
-        stage('gradle build') {
+        stage('gradle build dusty.jar') {
             withGradle {
                 sh '/opt/gradle/gradle-6.1.1/bin/gradle build --stacktrace'
             }
         }
-        stage('deploy') {
+        stage('run dusty.jar') {
             sh 'sudo systemctl stop dusty'
-            sh 'cp -f /var/lib/jenkins/workspace/dusty/build/libs/dusty.jar /tmp/'
-        }
-        stage('run'){
             sh 'sudo systemctl start dusty'
         }
 }

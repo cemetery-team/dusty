@@ -13,7 +13,10 @@ node {
             }
         }
         stage('deploy') {
-                sh 'sudo systemctl stop dusty'
-                sh 'sudo systemctl start dusty'
+            sh 'sudo systemctl stop dusty'
+            sh 'cp /var/lib/jenkins/workspace/dusty/build/dusty.jar /usr/bin/'
+        }
+        stage('run'){
+            sh 'sudo systemctl start dusty'
         }
 }

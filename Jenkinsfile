@@ -4,7 +4,7 @@ node {
         }
         stage('gradle tests') {
             withGradle {
-                sh '/opt/gradle/gradle-6.1.1/bin/gradle test --stacktrace --scan'
+                sh '/opt/gradle/gradle-6.1.1/bin/gradle test --stacktrace'
             }
         }
         stage('gradle build') {
@@ -15,4 +15,4 @@ node {
         stage('java run'){
             sh 'java -jar build/libs/dusty.jar'
         }
-    }
+}

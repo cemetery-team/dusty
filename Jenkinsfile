@@ -13,6 +13,6 @@ node {
             }
         }
         stage('deploy') {
-                sh 'ansible -b -i inventory all -m systemd -a "name=dusty state=restarted"'
+                sh 'ansible -b -i . --limit=localhost -m systemd -a "name=dusty state=restarted"'
         }
 }
